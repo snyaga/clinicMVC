@@ -15,8 +15,8 @@
 
 <form action="<c:url value='/drugs' />" method='POST'>
 
-  <input type="number" placeholder="patientID" name="pid" >
-  <input type="text" placeholder="drug name" name="dname" >
+  <input type="number" placeholder="patientId" name="patientId" >
+  <input type="text" placeholder="drug name" name="drugName" >
 
   <button> Submit</button>
 

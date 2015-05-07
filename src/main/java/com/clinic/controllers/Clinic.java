@@ -1,5 +1,7 @@
 package com.clinic.controllers;
 
+import com.clinic.models.Drugs;
+import com.clinic.models.Patient;
 import com.clinic.services.DrugService;
 import com.clinic.services.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,29 @@ public class Clinic {
     public ModelAndView register(@RequestParam(value = "fname", required = false) String fname),
                         @RequestParam(value = "lname", required = false) String lname,
                         @RequestParam(value = "dob", required = false) String dob)
+    {
+        ModelAndView model = new ModelAndView();
+        Patient patient = new Patient();
+        patient.setFname(fname);
+        patient.setLname(lname);
+        patient.setDob(dob);
+        patiientService.insertRow(patient);
+
+
+    }
+
+    @RequestMapping("/drugs")
+    public ModelAndView register(@RequestParam(value = "pid", required = false) String pid),
+    @RequestParam(value = "dname", required = false) String dname)
+    {
+        ModelAndView model = new ModelAndView();
+        Drugs drugs = new Drugs();
+        drugs.setPid(pid);
+        drugs.setDname(dname);
+        drugService.insertRow(drug);
+
+
+    }
 
 
 

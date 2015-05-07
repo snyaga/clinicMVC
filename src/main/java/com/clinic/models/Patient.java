@@ -11,16 +11,13 @@ import javax.persistence.IdClass;
 public class Patient {
     @Id
     @GeneratedValue
-    private int patientid;
+    private int patientId;
 
-    @Column(name = "firstName")
-    private String fname;
+    private String firstName;
 
-    @Column(name = "lastName")
-    private String lname;
+    private String lastName;
 
-    @Column(name = "dateOfBirth")
-    private String dob;
+    private String dateOfBirth;
 
 
 }

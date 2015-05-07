@@ -14,8 +14,8 @@
 
 <form action="<c:url value='/register' />" method='POST'>
 
-  <input type="text" placeholder="first name" name="fname" >
-  <input type="text" placeholder="last name" name="lname" >
+  <input type="text" placeholder="first name" name="firstName" >
+  <input type="text" placeholder="last name" name="lastName" >
   <input type="date" placeholder="date of birth" name="dob" >
 
 
