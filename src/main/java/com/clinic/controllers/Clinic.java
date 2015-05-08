@@ -26,6 +26,16 @@ public class Clinic {
     @Autowired
     DrugService drugService;
 
+    @RequestMapping("/index")
+    public ModelAndView hello1(){
+
+        ModelAndView model = new ModelAndView();
+        model.addObject("msg","WELCOME TO SPRING MVC");
+        model.setViewName("registration");
+
+        return model;
+    }
+
     @RequestMapping("/register")
     public ModelAndView register(@RequestParam(value = "firstName", required = false) String fname,
                                  @RequestParam(value = "lastName", required = false) String lname,

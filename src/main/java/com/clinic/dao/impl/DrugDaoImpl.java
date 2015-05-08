@@ -35,7 +35,7 @@ public class DrugDaoImpl implements Drugsdao {
     public List<Drugs> getList() {
         Session session = sessionFactory.openSession();
         @SuppressWarnings("unchecked")
-        List<Drugs> employeeList = session.createQuery("from Drugs").list();
+        List<Drugs> drugsList = session.createQuery("from Drugs").list();
         session.close();
         return drugsList;
     }

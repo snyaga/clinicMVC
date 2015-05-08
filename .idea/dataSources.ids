@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - clinic@localhost" uuid="b83f31f6-8e14-44b8-b48a-57c623362014">
+    <database-info product="MySQL" version="5.5.43-0ubuntu0.12.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="clinic"/>
+    <table name="drugs" schema="" catalog="clinic" type="TABLE">
+      <column name="drugID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="patientID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="drugName" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="drugID"/>
+      <foreign-key name="drugs_ibfk_1" columns="patientID" ref-table="patient" ref-schema="" ref-catalog="clinic" ref-columns="patientID" update-rule="0" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="patient" schema="" catalog="clinic" type="TABLE">
+      <column name="patientID" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="firstName" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="lastName" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="dateOfBirth" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="timeStamp" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
+      <primary-key name="PRIMARY" columns="patientID"/>
+      <exported-key name="drugs_ibfk_1" table="drugs" schema="" catalog="clinic" columns="patientID"/>
+    </table>
+  </data-source>
+</component>

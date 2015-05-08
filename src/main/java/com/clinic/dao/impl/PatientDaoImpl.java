@@ -1,5 +1,6 @@
 package com.clinic.dao.impl;
 
+import com.clinic.dao.Patientdao;
 import com.clinic.models.Patient;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
@@ -15,7 +16,8 @@ import java.util.List;
 /**
  * Created by susan on 5/7/15.
  */
-public class PatientDaoImpl {
+public class PatientDaoImpl implements Patientdao
+{
     @Autowired
     SessionFactory sessionFactory;
 
@@ -36,7 +38,7 @@ public class PatientDaoImpl {
     public List<Patient> getList() {
         Session session = sessionFactory.openSession();
         @SuppressWarnings("unchecked")
-        List<Patient> employeeList = session.createQuery("from Patient").list();
+        List<Patient> patientList = session.createQuery("from Patient").list();
         session.close();
         return patientList;
     }
