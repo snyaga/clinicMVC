@@ -6,6 +6,7 @@ import org.hibernate.annotations.Table;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.sql.Date;
 
 /**
  * Created by susan on 5/7/15.
@@ -15,16 +16,39 @@ import javax.persistence.Id;
 public class Drugs {
     @Id
     @GeneratedValue
-    private int drugid;
+    private int drugId;
 
-    @Column(name = "patientId")
-    private String patientId;
 
-    @Column(name = "drugName")
-    private String druname;
+    private int patientId;
 
-    @Column(name = "dateOfBirth")
-    private String dob;
+
+    private String drugName;
+
+
+    public int getDrugId() {
+        return drugId;
+    }
+
+    public void setDrugId(int drugId) {
+        this.drugId = drugId;
+    }
+
+    public int getPatientId() {
+        return patientId;
+    }
+
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
+    }
+
+    public String getDrugName() {
+        return drugName;
+    }
+
+    public void setDrugName(String drugName) {
+        this.drugName = drugName;
+    }
+
 
 
 }

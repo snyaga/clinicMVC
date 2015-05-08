@@ -19,7 +19,7 @@
              class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 
               <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-              <property name="url" value="jdbc:mysql://localhost:/test" />
+              <property name="url" value="jdbc:mysql://localhost:3306/clinic" />
               <property name="username" value="root" />
               <property name="password" value="root" />
        </bean>
@@ -31,6 +31,7 @@
               <property name="annotatedClasses">
                      <list>
                             <value>com.clinic.models.Drugs</value>
+                            <value>com.clinic.models.Patient</value>
                      </list>
               </property>
               <property name="hibernateProperties">
