@@ -1,7 +1,7 @@
 package com.clinic.services;
 
-import com.clinic.dao.Drugsdao;
-import com.clinic.models.Drugs;
+import com.clinic.dao.DrugDao;
+import com.clinic.models.Drug;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -11,20 +11,20 @@ import java.util.List;
  */
 public class DrugServiceImpl implements DrugService{
     @Autowired
-    Drugsdao drugsdao;
+    DrugDao drugDao;
 
     @Override
-    public int insertRow(Drugs drugs) {
-        return drugsdao.insertRow(drugs);
+    public int insertRow(Drug drug) {
+        return drugDao.insertRow(drug);
     }
 
     @Override
-    public List<Drugs> getList() {
-        return drugsdao.getList();
+    public List<Drug> getList() {
+        return drugDao.getList();
     }
 
     @Override
-    public int updateRow(Drugs drugs) {
+    public int updateRow(Drug drug) {
         return 0;
     }
 

@@ -26,7 +26,7 @@
 
   <input type="text" placeholder="first name" name="firstName" >
   <input type="text" placeholder="last name" name="lastName" >
-  <input type="date" placeholder="date of birth" name="dob" >
+  <input type="date" placeholder="dd/mm/yyyy" name="dateOfBirth" >
 
 
   <button> Submit</button>

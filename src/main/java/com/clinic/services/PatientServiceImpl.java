@@ -1,6 +1,6 @@
 package com.clinic.services;
 
-import com.clinic.dao.Patientdao;
+import com.clinic.dao.PatientDao;
 import com.clinic.models.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -11,16 +11,16 @@ import java.util.List;
  */
 public class PatientServiceImpl implements PatientService{
     @Autowired
-    Patientdao patientdao;
+    PatientDao patientDao;
 
     @Override
     public int insertRow(Patient patient){
-        return patientdao.insertRow(patient);
+        return patientDao.insertRow(patient);
     }
 
     @Override
     public List<Patient> getList() {
-        return patientdao.getList();
+        return patientDao.getList();
     }
 
     @Override

@@ -22,9 +22,18 @@
   <div class="msg">${msg}</div>
 </c:if>
 
-<form action="<c:url value='/drugs' />" method='POST'>
+<form action="<c:url value='/drug' />" method='POST'>
 
-  <input type="number" placeholder="patientId" name="patientId" >
+  <!--<input type="number" placeholder="patientId" name="patientId" >-->
+  <label>Patient ID</label>
+  <select name="patientId" required class="form-control">
+    <option></option>
+    <c:forEach  var="option" items="${data}">
+      <option>${option.patientId}</option>
+    </c:forEach>
+  </select>
+
+
   <input type="text" placeholder="drug name" name="drugName" >
 
   <button> Submit</button>

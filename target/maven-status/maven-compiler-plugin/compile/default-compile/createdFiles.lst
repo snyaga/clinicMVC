@@ -1,7 +1,7 @@
+com/clinic/models/Drug.class
 com/clinic/models/Patient.class
-com/clinic/models/Drugs.class
-com/clinic/controllers/Clinic.class
-com/clinic/dao/Patientdao.class
-com/clinic/dao/Drugsdao.class
+com/clinic/controllers/ClinicController.class
+com/clinic/dao/DrugDao.class
+com/clinic/dao/PatientDao.class
 com/clinic/dao/impl/DrugDaoImpl.class
 com/clinic/dao/impl/PatientDaoImpl.class

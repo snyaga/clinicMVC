@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="drugs")
-public class Drugs {
+public class Drug {
     @Id
     @GeneratedValue
     private int drugId;

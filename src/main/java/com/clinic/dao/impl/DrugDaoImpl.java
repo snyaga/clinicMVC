@@ -1,7 +1,7 @@
 package com.clinic.dao.impl;
 
-import com.clinic.dao.Drugsdao;
-import com.clinic.models.Drugs;
+import com.clinic.dao.DrugDao;
+import com.clinic.models.Drug;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -14,34 +14,34 @@ import java.util.List;
 /**
  * Created by susan on 5/7/15.
  */
-public class DrugDaoImpl implements Drugsdao {
+public class DrugDaoImpl implements DrugDao {
     @Autowired
     SessionFactory sessionFactory;
 
     @Transactional
     @Override
-    public int insertRow(Drugs drugs) {
+    public int insertRow(Drug drug) {
         Session session = sessionFactory.openSession();
         Transaction tx = session.beginTransaction();
-        session.save(drugs);
+        session.save(drug);
         tx.commit();
-        Serializable id = session.getIdentifier(drugs);
+        Serializable id = session.getIdentifier(drug);
         session.close();
         return (Integer) id;
     }
 
 
     @Override
-    public List<Drugs> getList() {
+    public List<Drug> getList() {
         Session session = sessionFactory.openSession();
         @SuppressWarnings("unchecked")
-        List<Drugs> drugsList = session.createQuery("from Drugs").list();
+        List<Drug> drugList = session.createQuery("from Drug").list();
         session.close();
-        return drugsList;
+        return drugList;
     }
 
     @Override
-    public int updateRow(Drugs drugs) {
+    public int updateRow(Drug drug) {
         return 0;
     }
 

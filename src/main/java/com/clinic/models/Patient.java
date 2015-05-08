@@ -17,7 +17,7 @@ public class Patient {
 
     private String lastName;
 
-    private Date dateOfBirth;
+    private String dateOfBirth;
 
     public int getPatientId() {
         return patientId;
@@ -43,11 +43,11 @@ public class Patient {
         this.lastName = lastName;
     }
 
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

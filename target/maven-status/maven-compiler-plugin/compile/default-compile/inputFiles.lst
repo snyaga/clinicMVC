@@ -1,11 +1,11 @@
 /home/susan/IdeaProjects/clinic/src/main/java/com/clinic/services/DrugServiceImpl.java
 /home/susan/IdeaProjects/clinic/src/main/java/com/clinic/services/PatientServiceImpl.java
+/home/susan/IdeaProjects/clinic/src/main/java/com/clinic/controllers/ClinicController.java
 /home/susan/IdeaProjects/clinic/src/main/java/com/clinic/models/Patient.java
-/home/susan/IdeaProjects/clinic/src/main/java/com/clinic/dao/Patientdao.java
 /home/susan/IdeaProjects/clinic/src/main/java/com/clinic/dao/impl/PatientDaoImpl.java
 /home/susan/IdeaProjects/clinic/src/main/java/com/clinic/services/DrugService.java
 /home/susan/IdeaProjects/clinic/src/main/java/com/clinic/services/PatientService.java
-/home/susan/IdeaProjects/clinic/src/main/java/com/clinic/models/Drugs.java
-/home/susan/IdeaProjects/clinic/src/main/java/com/clinic/controllers/Clinic.java
-/home/susan/IdeaProjects/clinic/src/main/java/com/clinic/dao/Drugsdao.java
+/home/susan/IdeaProjects/clinic/src/main/java/com/clinic/models/Drug.java
+/home/susan/IdeaProjects/clinic/src/main/java/com/clinic/dao/PatientDao.java
+/home/susan/IdeaProjects/clinic/src/main/java/com/clinic/dao/DrugDao.java
 /home/susan/IdeaProjects/clinic/src/main/java/com/clinic/dao/impl/DrugDaoImpl.java

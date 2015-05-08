@@ -1,12 +1,10 @@
 package com.clinic.dao.impl;
 
-import com.clinic.dao.Patientdao;
+import com.clinic.dao.PatientDao;
 import com.clinic.models.Patient;
-import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.transaction.Transactional;
@@ -16,7 +14,7 @@ import java.util.List;
 /**
  * Created by susan on 5/7/15.
  */
-public class PatientDaoImpl implements Patientdao
+public class PatientDaoImpl implements PatientDao
 {
     @Autowired
     SessionFactory sessionFactory;
